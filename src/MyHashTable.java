@@ -19,15 +19,15 @@ public class MyHashTable<K, V> {
     private int size;
 
     public MyHashTable() {
-        chainArray = new HashNode[M];
+        this.chainArray = new HashNode[ this.M];
         size = 0;
     }
     public MyHashTable(int M) {
         this.M = M;
-        chainArray = new HashNode[M];
+        this.chainArray = new HashNode[ this.M];
         size = 0;
     }
-    private int hash(K key) {
+    public int hash(K key) {
             int hash = 0;
             String str = key.toString();
 
@@ -35,7 +35,7 @@ public class MyHashTable<K, V> {
                 hash = 31 * hash + str.charAt(i);
             }
 
-            return hash;
+            return hash%this.M;
         }
     public void put(K key, V value) {
         int hashIndex = hash(key);
@@ -111,5 +111,16 @@ public class MyHashTable<K, V> {
             }
         }
         return null;
+    }
+    public void getAll(){
+        for (int i = 0; i < M; i++) {
+            int count = 0;
+            HashNode<K, V> node = chainArray[i];
+            while (node != null) {
+                count++;
+                node = node.next;
+            }
+            System.out.println("Bucket " + i + ": " + count + " entries");
+        }
     }
 }

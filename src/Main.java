@@ -1,5 +1,8 @@
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        MyTestingClass myTestingClass = new MyTestingClass(0, 0);
+        myTestingClass.testRemove();
     }
 }
