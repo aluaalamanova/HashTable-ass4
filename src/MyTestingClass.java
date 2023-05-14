@@ -13,26 +13,39 @@ public class MyTestingClass {
     }
 
     public void testPut() {
-        myTable.put("Alice", "1");
-        myTable.put("Bob", "2");
-        myTable.put("Charlie", "3");
-        System.out.println(myTable.get("Alice"));
-        System.out.println(myTable.get("Bob"));
-        System.out.println(myTable.get("Charlie"));
+        myTable.put(1, "Alice");
+        myTable.put(2, "Bob");
+        myTable.put(3, "Charlie");
+        System.out.println(myTable.get(1));
+        System.out.println(myTable.get(2));
+        System.out.println(myTable.get(3));
     }
 
     public void testRemove() {
-        myTable.put("Sabina", "4");
-        myTable.put("Alina","5");
-        myTable.put("Eva", "6");
-        myTable.put("Messi", "7");
-        myTable.remove("Eva");
-        System.out.println(myTable.get("Sabina"));
-        System.out.println(myTable.get("Alina"));
-        System.out.println(myTable.get("Messi"));
-        System.out.println(myTable.get("Eva"));
+        myTable.put(4, "Sabina");
+        myTable.put(5, "Alina");
+        myTable.put(6, "Eva");
+        myTable.put(7, "Messi");
+        myTable.remove(6);
+        System.out.println(myTable.get(4));
+        System.out.println(myTable.get(5));
+        System.out.println(myTable.get(7));
+        System.out.println(myTable.get(6));
 
 
+    }
+    public void testContains(){
+        myTable.put(8, "Aliya");
+        myTable.put(9, "Beka");
+        myTable.put(10, "Sanzhar");
+        myTable.put(11, "Arsen");
+        System.out.println("Students");
+        System.out.println(myTable.get(8));
+        System.out.println(myTable.get(9));
+        System.out.println(myTable.get(10));
+        System.out.println(myTable.get(11));
+        System.out.println("Does it contain Arsen? " + myTable.contains("Arsen"));
+        System.out.println("Does it contain Madina? " + myTable.contains("Madina"));
     }
 
 }
