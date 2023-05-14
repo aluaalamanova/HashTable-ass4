@@ -47,5 +47,26 @@ public class MyTestingClass {
         System.out.println("Does it contain Arsen? " + myTable.contains("Arsen"));
         System.out.println("Does it contain Madina? " + myTable.contains("Madina"));
     }
-
+    public void testGetKey(){
+        myTable.put(12, "Meruert");
+        myTable.put(13, "Aigerim");
+        myTable.put(14, "Samat");
+        myTable.put(15, "Abzal");
+        System.out.println(myTable.getKey("Aigerim"));
+        System.out.println(myTable.getKey("Meruert"));
+    }
+    public void testRandom(){
+        putRandom();
+        table.getAll();
+    }
+    public void putRandom(){
+        for (int i = 0; i < 10000; i++) {
+            int x = random.nextInt(1000);
+            int y = random.nextInt(1000);
+            MyTestingClass key = new MyTestingClass(x, y);
+            Student value = new Student("Student " + i, i);
+            table.put(key, value);
+        }
+    }
 }
+
