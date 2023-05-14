@@ -27,4 +27,15 @@ public class MyHashTable<K, V> {
         chainArray = new HashNode[M];
         size = 0;
     }
+    private int hash(K key) {
+            int hash = 0;
+            String str = key.toString();
+
+            for (int i = 0; i < str.length(); i++) {
+                hash = 31 * hash + str.charAt(i);
+            }
+
+            return hash;
+        }
+
 }
