@@ -1,5 +1,5 @@
 import java.util.Random;
-
+//Constructor for MyTestingClass, takes two integer parameters x and y and assigns them to class variables
 public class MyTestingClass {
     private int x;
     private int y;
@@ -11,7 +11,7 @@ public class MyTestingClass {
         this.x = x;
         this.y = y;
     }
-
+    //This method tests the put() method of MyHashTable by adding several key-value pairs to the hash table and then prints the values of the keys added.
     public void testPut() {
         myTable.put(1, "Alice");
         myTable.put(2, "Bob");
@@ -20,7 +20,7 @@ public class MyTestingClass {
         System.out.println(myTable.get(2));
         System.out.println(myTable.get(3));
     }
-
+    //This method tests the remove() method of MyHashTable by adding several key-value pairs to the hash table,then removing a key-value pair using the remove() method and then printing the values of the remaining keys.
     public void testRemove() {
         myTable.put(4, "Sabina");
         myTable.put(5, "Alina");
@@ -34,6 +34,9 @@ public class MyTestingClass {
 
 
     }
+    //This method tests the contains() method of MyHashTable by adding several key-value pairs to the hash table,
+    // * and then checking if the hash table contains certain values and printing the results.
+    // */
     public void testContains(){
         myTable.put(8, "Aliya");
         myTable.put(9, "Beka");
@@ -47,6 +50,10 @@ public class MyTestingClass {
         System.out.println("Does it contain Arsen? " + myTable.contains("Arsen"));
         System.out.println("Does it contain Madina? " + myTable.contains("Madina"));
     }
+    /**
+     * This method tests the getKey() method of MyHashTable by adding several key-value pairs to the hash table,
+     * and then retrieving the key of a certain value and printing it.
+     */
     public void testGetKey(){
         myTable.put(12, "Meruert");
         myTable.put(13, "Aigerim");
