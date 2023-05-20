@@ -66,6 +66,15 @@ public class MyTestingClass {
         putRandom();
         table.getAll();
     }
+    public void testReplace(){
+        myTable.put(12, "Meruert");
+        myTable.put(13, "Aigerim");
+        myTable.put(14, "Samat");
+        myTable.put(15, "Abzal");
+        myTable.replace(12, "Meruert", "Alua");
+        System.out.println(myTable.get(12));
+
+    }
     public void putRandom(){
         for (int i = 0; i < 10000; i++) {
             int x = random.nextInt(1000);

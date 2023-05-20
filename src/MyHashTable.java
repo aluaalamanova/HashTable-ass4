@@ -133,6 +133,18 @@ public class MyHashTable<K, V> {
         }
         return null;
     }
+    public void replace(K key, V value, V newValue){
+        for (int i = 0; i < M; i++) {
+            HashNode<K, V> node = chainArray[i];
+            while (node != null) {
+                if (node.key.equals(key)) {
+                    node.value =null;
+                    node.value=newValue;
+                }
+                node = node.next;
+            }
+        }
+    }
     //Prints the number of entries in each bucket of the hash table.
     public void getAll(){
         for (int i = 0; i < M; i++) {
